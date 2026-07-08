@@ -1,304 +1,374 @@
-⚡ IoT-Based Smart Energy Monitoring, Control and Safety System
-📖 Project Overview
+# ⚡ IoT-Based Smart Energy Monitoring, Control and Safety System
 
-The IoT-Based Smart Energy Monitoring, Control and Safety System is an intelligent embedded system designed to monitor electrical energy consumption, remotely control electrical appliances, and provide safety features through IoT technology. The project aims to improve energy efficiency, reduce electricity wastage, and enhance user safety by integrating real-time monitoring, cloud connectivity, and AI-based authentication.
+An intelligent IoT-based home automation system that provides **real-time energy monitoring**, **remote appliance control**, **electrical safety**, and **secure access using face recognition**. Built using the ESP32 microcontroller, this project integrates IoT, embedded systems, and computer vision to create a cost-effective smart energy management solution.
 
-The system is built around the ESP32 microcontroller, which collects electrical parameters from voltage and current sensors, calculates energy consumption, and transmits the data to the Blynk IoT Platform. Users can remotely monitor voltage, current, power, energy consumption, and estimated electricity bills using a smartphone.
+---
 
-Apart from energy monitoring, the project also includes relay-based load control, allowing users to switch appliances ON/OFF from anywhere through the internet. Safety features such as fire detection, gas leakage detection, door lock control, and face recognition authentication make the system suitable for modern smart homes and industries.
+## 📖 Project Overview
 
-🎯 Objectives
-Monitor electrical parameters in real time.
-Measure voltage, current, power, and energy consumption.
-Display live electrical data on LCD and mobile application.
-Control appliances remotely using IoT.
-Improve electrical safety through fire and gas detection.
-Provide secure access using face recognition.
-Calculate estimated electricity bill automatically.
-Reduce unnecessary power consumption.
-✨ Features
-Energy Monitoring
-Real-time Voltage Monitoring
-Real-time Current Monitoring
-Power Calculation
-Energy Consumption Monitoring
-Electricity Bill Estimation
-Smart Appliance Control
-Remote Bulb Control
-Remote Socket Control
-Remote Motor Control
-Manual Switch Control
-Relay Based Load Switching
-Safety Features
-Fire Detection
-Gas Leakage Detection
-Buzzer Alert System
-LED Status Indication
-Smart Security
-Face Recognition Authentication
-Authorized User Verification
-Automatic Door Lock Control using Servo Motor
-IoT Features
-Blynk Mobile Dashboard
-Real-time Sensor Monitoring
-Internet-Based Device Control
-Live Notifications
-Data Logging
-🛠 Hardware Components
-Component	Purpose
-ESP32 Dev Board	Main Controller
-ACS712 Current Sensor	Current Measurement
-ZMPT101B Voltage Sensor	Voltage Measurement
-16×2 LCD Display	Local Data Display
-Relay Modules	Appliance Control
-Servo Motor	Door Lock System
-Flame Sensor	Fire Detection
-MQ Gas Sensor	Gas Leakage Detection
-Active Buzzer	Alarm System
-LEDs	Status Indication
-Breadboard	Circuit Assembly
-Jumper Wires	Connections
-Power Supply	System Power
-💻 Software Requirements
-Arduino IDE
-Python
-OpenCV
-VS Code
-Blynk IoT Platform
-IFTTT
-Node-RED (Optional)
-Git
-⚙ Technologies Used
-Embedded C
-Python
-ESP32
-IoT
-OpenCV
-Computer Vision
-Blynk Cloud
-IFTTT Automation
-HTTP Communication
-Wi-Fi Networking
-🧠 Working Principle
-Step 1
+The **IoT-Based Smart Energy Monitoring, Control and Safety System** is designed to monitor electrical energy consumption, remotely control electrical appliances, and improve safety through IoT technology.
 
-The ESP32 continuously reads electrical parameters from:
+The system is powered by an **ESP32 microcontroller**, which acts as the central controller for data acquisition, processing, and wireless communication. Electrical parameters are measured using the **ACS712 Current Sensor** and **ZMPT101B Voltage Sensor**. The ESP32 processes these readings to calculate voltage, current, power consumption, energy usage (kWh), and estimated electricity bills in real time.
 
-ACS712 Current Sensor
-ZMPT101B Voltage Sensor
-Step 2
+The measured values are displayed on a **16×2 LCD** for local monitoring and transmitted to the **Blynk IoT Dashboard** for remote monitoring through a smartphone.
 
-The controller calculates
+The project also allows users to remotely control electrical appliances using relay modules through the Blynk mobile application. Manual switching is also supported.
 
-Voltage
-Current
-Instantaneous Power
-Energy Consumption (kWh)
+To enhance user safety, the system continuously monitors for fire and gas leakage. If an abnormal condition is detected, the buzzer is activated and the user is alerted immediately.
 
-using RMS-based calculations.
+For improved security, an **OpenCV-based Face Recognition System** authenticates users before unlocking the door using a servo motor, ensuring that only authorized individuals can access the system.
 
-Step 3
+This project demonstrates how IoT, embedded systems, and computer vision can be combined to build a secure, intelligent, and energy-efficient smart home solution.
 
-The calculated values are displayed on
+---
 
-16×2 LCD
-Blynk Mobile Dashboard
-Step 4
+# 🎯 Objectives
 
-The user can remotely control
+- Monitor voltage, current, power, and energy consumption in real time.
+- Display live energy data on an LCD and Blynk dashboard.
+- Control electrical appliances remotely through the Internet.
+- Improve electrical safety using fire and gas detection.
+- Provide secure access using face recognition.
+- Estimate electricity bills based on energy consumption.
+- Reduce unnecessary electricity wastage.
 
-Bulb
-Socket
-Motor
+---
 
-using relay modules through the Blynk application.
+# ✨ Features
 
-Step 5
+### ⚡ Energy Monitoring
 
-Safety sensors continuously monitor
+- Real-Time Voltage Monitoring
+- Real-Time Current Monitoring
+- Power Calculation
+- Energy Consumption (kWh)
+- Electricity Bill Estimation
+- Live Data Visualization
 
-Fire
-Gas Leakage
+### 📱 IoT Appliance Control
 
-Whenever danger is detected,
+- Remote Bulb Control
+- Remote Socket Control
+- Remote Motor Control
+- Manual Relay Control
+- Online Appliance Monitoring
 
-Buzzer activates
-LED glows
-User receives notification.
-Step 6
+### 🔥 Safety Features
 
-The face recognition system continuously monitors the camera.
+- Fire Detection
+- Gas Leakage Detection
+- Automatic Buzzer Alert
+- LED Status Indication
+- Emergency Notification
+
+### 🔐 Security Features
+
+- OpenCV Face Recognition
+- Authorized User Authentication
+- Automatic Servo Door Lock
+
+### 📊 Dashboard Features
+
+- Voltage Monitoring
+- Current Monitoring
+- Power Monitoring
+- Energy Consumption
+- Electricity Bill
+- Appliance Status
+- Door Status
+- Fire Status
+- Gas Status
+- Live Charts
+
+---
+
+# 🛠 Hardware Components
+
+| Component | Purpose |
+|-----------|---------|
+| ESP32 Development Board | Main Controller |
+| ACS712 Current Sensor | Current Measurement |
+| ZMPT101B Voltage Sensor | Voltage Measurement |
+| 16×2 LCD Display | Local Display |
+| 4-Channel Relay Module | Appliance Control |
+| Servo Motor | Door Lock |
+| Flame Sensor | Fire Detection |
+| MQ Gas Sensor | Gas Detection |
+| Active Buzzer | Alarm |
+| LEDs | Status Indicators |
+| Breadboard | Circuit Assembly |
+| Jumper Wires | Wiring |
+| Power Supply | System Power |
+
+---
+
+# 💻 Software Requirements
+
+- Arduino IDE
+- Python 3.x
+- OpenCV
+- Visual Studio Code
+- Blynk IoT
+- IFTTT
+- Git
+- GitHub
+
+---
+
+# 🔧 Technologies Used
+
+- ESP32
+- Embedded C
+- Python
+- OpenCV
+- Arduino Framework
+- Internet of Things (IoT)
+- Wi-Fi Communication
+- Blynk Cloud
+- HTTP Protocol
+
+---
+
+# ⚙ System Architecture
+
+The system consists of five major modules:
+
+## 1. Energy Monitoring Module
+
+Measures AC voltage and current using the ZMPT101B and ACS712 sensors. The ESP32 calculates:
+
+- Voltage (V)
+- Current (A)
+- Power (W)
+- Energy (kWh)
+
+---
+
+## 2. IoT Communication Module
+
+The ESP32 connects to Wi-Fi and synchronizes data with the Blynk Cloud.
+
+Users can:
+
+- Monitor live sensor values
+- Control appliances remotely
+- View electricity consumption
+- Check estimated electricity bills
+
+---
+
+## 3. Appliance Control Module
+
+Electrical appliances are connected through relay modules.
+
+Supported loads include:
+
+- Bulb
+- Fan
+- Motor
+- Socket
+
+Each appliance can be controlled:
+
+- Manually
+- Through the Blynk App
+- Via Internet
+
+---
+
+## 4. Safety Monitoring Module
+
+The safety module continuously monitors:
+
+- Fire
+- Gas Leakage
+
+Whenever an abnormal condition is detected:
+
+- Buzzer activates
+- LED turns ON
+- User receives an alert
+
+---
+
+## 5. Face Recognition Module
+
+The security module uses:
+
+- Python
+- OpenCV
+- Teachable Machine
+
+The webcam continuously captures images.
 
 If an authorized user is detected:
 
-Door Unlocks
-Servo rotates
+- Door Unlocks
+- Servo rotates
 
-Otherwise
+Otherwise:
 
-Door remains locked.
-🔐 Face Recognition Module
+- Door remains locked.
 
-The security module uses
+---
 
-OpenCV
-Python
-Teachable Machine Model
+# 🔄 Working Principle
 
-The webcam captures live images.
+1. The ESP32 powers up and initializes all sensors.
+2. Voltage and current sensors continuously measure electrical parameters.
+3. The ESP32 calculates power, energy consumption, and estimated electricity bills.
+4. Data is displayed on the LCD and transmitted to the Blynk dashboard.
+5. Users can remotely control connected appliances through the mobile application.
+6. Fire and gas sensors monitor environmental conditions continuously.
+7. If an abnormal condition is detected, the buzzer activates and the user is alerted.
+8. The face recognition system authenticates users before unlocking the door.
 
-Each frame is classified using the trained model.
+---
 
-If
+# 📐 Energy Calculation
 
-Confidence > Threshold
+### Power
 
-Door Unlocks
+```text
+Power (W) = Voltage (V) × Current (A)
+```
 
-Else
+### Energy
 
-Door Remains Locked.
+```text
+Energy (kWh) = Power × Time
+```
 
-📱 IoT Dashboard Features
+### Electricity Bill
 
-The Blynk dashboard contains
+```text
+Bill = Energy Consumed × Tariff
+```
 
-Bulb ON/OFF
-Socket ON/OFF
-Motor ON/OFF
-Vacation Mode
-Voltage Gauge
-Current Gauge
-Power Display
-Unit Consumed
-Bill Analysis
-Door Status
-Fire Status
-Gas Status
-Live Charts
-🔥 Safety Module
+---
 
-The system constantly checks
+# 📱 Blynk Dashboard
 
-Flame Sensor
-Gas Sensor
+The dashboard provides:
 
-When abnormal values are detected,
+- Voltage Monitoring
+- Current Monitoring
+- Power Monitoring
+- Energy Consumption
+- Bill Estimation
+- Appliance Control
+- Door Status
+- Fire Status
+- Gas Status
+- Live Charts
 
-Relay can disconnect load
-Alarm activates
-LED turns ON
-Notification sent
-⚡ Energy Calculation
+---
 
-The project calculates
 
-Power
+# 🚀 Applications
 
-Power = Voltage × Current
+- 🏠 Smart Homes
+- 🏢 Smart Buildings
+- 🏭 Industrial Monitoring
+- 🏫 Educational Laboratories
+- 🏢 Office Automation
+- 🏫 Smart Classrooms
+- ⚡ Energy Audit Systems
+- 🏠 Home Automation
+- 🏨 Hostel Energy Management
+- 🎓 College Mini & Major Projects
 
-Energy
+---
 
-Energy = Power × Time
+# ✅ Advantages
 
-Electricity Bill
+- Real-Time Energy Monitoring
+- Remote Appliance Control
+- Low-Cost Implementation
+- Easy Installation and Maintenance
+- Improved Electrical Safety
+- Secure Face Recognition Authentication
+- Low Power Consumption
+- User-Friendly Interface
+- Scalable Architecture
+- Reliable IoT Connectivity
 
-Bill = Units Consumed × Tariff
-🌍 Applications
-Smart Home
-Smart Office
-Smart Classroom
-Industrial Monitoring
-Hostel Energy Management
-Laboratory Automation
-College Projects
-Home Automation
-Energy Audit Systems
-📊 Advantages
-Low Cost
-Easy to Build
-Real-Time Monitoring
-Remote Appliance Control
-Energy Saving
-Secure Access
-Safety Monitoring
-User Friendly
-Scalable Architecture
-Low Power Consumption
-🚀 Future Enhancements
-Machine Learning Based Energy Prediction
-Solar Energy Monitoring
-Smart Meter Integration
-Mobile Push Notifications
-Voice Control using Google Assistant
-Alexa Integration
-MQTT Communication
-Cloud Database
-Power Theft Detection
-Predictive Maintenance
-AI-Based Energy Optimization
-Smart Scheduling
-Mobile App Development
-Multiple User Authentication
-Fingerprint Authentication
-📁 Project Structure
-Smart-Energy-Monitoring-System/
-│
-├── Arduino_Code/
-│   ├── Smart_Energy_System.ino
-│
-├── Face_Recognition/
-│   ├── teachable_unlock.py
-│   ├── fix_model.py
-│   ├── keras_model.h5
-│   ├── labels.txt
-│
-├── Images/
-│   ├── Hardware.jpg
-│   ├── Dashboard.png
-│   ├── FaceRecognition.png
-│
-├── Circuit_Diagram/
-│
-├── Documentation/
-│   ├── Report.pdf
-│
-├── README.md
-│
-└── LICENSE
-📸 Project Demonstration
+---
 
-The project includes:
+# 🔮 Future Enhancements
 
-ESP32-based hardware prototype
-Live Blynk IoT Dashboard
-OpenCV Face Recognition
-Servo Door Lock Mechanism
-Relay Controlled Appliances
-Energy Monitoring Dashboard
-Fire & Gas Safety System
-🎓 Learning Outcomes
+- AI-Based Energy Consumption Prediction
+- Machine Learning-Based Load Analysis
+- Solar Energy Monitoring
+- Smart Meter Integration
+- MQTT Communication
+- Google Assistant Integration
+- Amazon Alexa Integration
+- Mobile Push Notifications
+- Cloud Database Integration
+- Predictive Maintenance
+- Power Theft Detection
+- Smart Scheduling of Appliances
+- Fingerprint Authentication
+- Multi-User Authentication
+- Dedicated Android Application
+
+
+---
+
+# 📸 Project Demonstration
+
+The project demonstrates:
+
+- ESP32-Based Hardware Prototype
+- Real-Time Energy Monitoring
+- Live Blynk IoT Dashboard
+- OpenCV Face Recognition Authentication
+- Automatic Servo Door Lock System
+- Relay-Based Appliance Control
+- Fire Detection and Alarm System
+- Gas Leakage Detection
+- Remote Appliance Monitoring and Control
+- Energy Consumption & Bill Analysis
+
+---
+
+# 📚 Learning Outcomes
 
 Through this project, I gained hands-on experience in:
 
-ESP32 Programming
-Embedded Systems
-IoT Application Development
-Blynk IoT Dashboard Design
-Electrical Parameter Measurement
-Sensor Integration
-Relay Automation
-OpenCV Face Recognition
-Python Programming
-Embedded C
-Hardware Debugging
-Real-Time Data Visualization
-Smart Home Automation
-Energy Management Systems
-👨‍💻 Developed By
+- ESP32 Programming
+- Embedded C Programming
+- Embedded Systems Design
+- Internet of Things (IoT)
+- Blynk IoT Platform
+- Sensor Interfacing
+- Voltage & Current Measurement
+- Relay Automation
+- OpenCV Face Recognition
+- Python Programming
+- Wi-Fi Communication
+- Real-Time Data Visualization
+- Hardware Integration
+- Electrical Energy Monitoring
+- Smart Home Automation
+- System Debugging and Testing
 
-Monishraj K
+---
+
+# 👨‍💻 Developer
+
+**Monishraj K**
+
 B.E. Electronics and Communication Engineering
-Kongu Engineering College, Tamil Nadu, India
 
-⭐ If you found this project useful, consider giving it a Star on GitHub!
+Kongu Engineering College
+
+Tamil Nadu, India
+
+
+---
+
+## ⭐ Support
+
+If you found this project useful, please consider giving this repository a **⭐ Star** on GitHub. Your support is greatly appreciated!
